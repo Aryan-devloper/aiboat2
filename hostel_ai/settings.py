@@ -30,6 +30,9 @@ extra_hosts = os.environ.get('ALLOWED_HOSTS', '')
 if extra_hosts:
     ALLOWED_HOSTS.extend([host.strip() for host in extra_hosts.split(',') if host.strip()])
 
+if DEBUG:
+    ALLOWED_HOSTS.append('*')
+
 
 # Application definition
 
