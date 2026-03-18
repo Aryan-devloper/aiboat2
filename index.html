@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SP હોસ્ટેલ AI સહાયક</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="title">હોસ્ટેલ AI સહાયક</h1>
+        <p class="subtitle">બોલો અને આજનું મેનૂ જાણો</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- AI Orb -->
+        <div class="orb-container">
+            <div class="orb">
+                <div class="orb-core"></div>
+                <div class="orb-glow"></div>
+                <div class="orb-wave wave-1"></div>
+                <div class="orb-wave wave-2"></div>
+                <div class="orb-wave wave-3"></div>
+                <div class="ripple"></div>
+            </div>
+        </div>
+
+        <!-- Status Text -->
+        <div class="status-text" id="statusText">તૈયાર છું</div>
+
+        <!-- Microphone Button -->
+        <button class="mic-button" id="micButton" aria-label="Voice input">
+            <div class="mic-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+            </div>
+            <span class="mic-text">બોલવા માટે ટૅપ કરો</span>
+        </button>
+
+        <!-- Text Input Area -->
+        <div class="input-container">
+            <input 
+                type="text" 
+                class="text-input" 
+                id="textInput" 
+                placeholder="ઉદાહરણ: આજ બપોરે શું છે?"
+                aria-label="Text input"
+            >
+            <button class="send-button" id="sendButton" aria-label="Send message">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Chat Response Area -->
+        <div class="response-container" id="responseContainer">
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Gujarati Voice-Based Hostel Menu Assistant</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: aiboat
+    env: python
+    plan: free
+    buildCommand: bash build.sh
+    startCommand: gunicorn hostel_ai.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 2
